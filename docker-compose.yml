@@ -1,5 +1,3 @@
-volumes:
-  mysql_data: 
 networks:
   rocket_network:
     driver: bridge
@@ -12,13 +10,11 @@ services:
       - 3366:3306
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
-      MYSQL_DATABASE: go_backbone
+      MYSQL_DATABASE: go_test
       MYSQL_USER: kanjiro
-      MYSQL_PASSWORD: Kanjiro23
+      MYSQL_PASSWORD: 12345678
     networks:
       - rocket_network
-    volumes:
-      - mysql_data:/var/lib/mysql 
 
   golang:
     container_name: rocket-backend
@@ -41,7 +37,7 @@ services:
         context: ./admin/.
         dockerfile: Dockerfile
       ports:
-        - "3001:3001"
+        - "3000:3000"
       volumes:
         - ./app:/usr/app
       networks:

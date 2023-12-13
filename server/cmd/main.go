@@ -10,7 +10,7 @@ import (
 func main() {
 
 	corsSettings := cors.New(cors.Config{
-		AllowOrigins:     "http://localhost:3001",
+		AllowOrigins:     "http://localhost:3000",
 		AllowMethods:     "GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH",
 		AllowHeaders:     "Origin, Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization,X-Requested-With",
 		ExposeHeaders:    "Origin",

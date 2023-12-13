@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import Link from 'next/link'
+import { useStore } from '../store/store'
 import { logout } from "@/api-requests/auth"
 export function UserNav() {
 
